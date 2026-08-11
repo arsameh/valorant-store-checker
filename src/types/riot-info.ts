@@ -1,7 +1,7 @@
+import { AuthTokens } from "./auth-tokens";
+
 export interface RiotInfo {
-    puuid: string;
-    idToken: string;
-    accessToken: string;
+    authTokens: AuthTokens;
     entitlementToken: string;
     shard: string;
     sessionCookies: string[];
