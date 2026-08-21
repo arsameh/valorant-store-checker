@@ -1,7 +1,7 @@
 import { AuthTokens } from "../types/auth-tokens";
 import { throwExpression } from "../util/throw-expression"; 
 
-export function parseAuthTokens(url: string): AuthTokens {
+export async function parseAuthTokens(url: string): Promise<AuthTokens> {
 
     const searchParams = new URLSearchParams((new URL(url)).hash.slice(1));
     const accessToken = searchParams.get("access_token") ?? throwExpression("access_token param missing");

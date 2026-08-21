@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "main": "index.ts",
   "dependencies": {
+    "@preeternal/react-native-cookie-manager": "^6.4.0",
     "expo": "~57.0.12",
     "expo-dev-client": "~57.0.11",
     "expo-status-bar": "~57.0.1",
     "react": "19.2.3",
     "react-native": "0.86.2",
+    "react-native-safe-area-context": "~5.7.0",
     "react-native-webview": "13.16.1"
   },
   "devDependencies": {
