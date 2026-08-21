@@ -3,5 +3,6 @@ export interface Skin {
     name: string;
     price: number;
     picture: string;
+    tierUuid: string;
     discount?: number;
 }
