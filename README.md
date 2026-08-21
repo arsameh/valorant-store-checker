@@ -2,7 +2,7 @@
 A lightweight app to check daily valorant store changes through your phone!
 
 ## TODO:
-- [ ] Develop initial WebView login
+- [x ] Develop initial WebView login
 - [x] Handle token extraction
 - [x] Get player info (`puuid`, region)
 - [x] Fetch & parse raw storefront JSON from Riot API
