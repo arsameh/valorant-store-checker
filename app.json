@@ -20,6 +20,9 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "plugins": [
+      "@preeternal/react-native-cookie-manager"
+    ]
   }
 }

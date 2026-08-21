@@ -4,5 +4,5 @@ export interface RiotInfo {
     authTokens: AuthTokens;
     entitlementToken: string;
     shard: string;
-    sessionCookies: string[];
+    sessionCookies: Record<string, string>;
 }
