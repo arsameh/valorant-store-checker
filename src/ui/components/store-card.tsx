@@ -1,25 +1,44 @@
 import { Dimensions, View, Image, Text, StyleSheet } from "react-native";
 import { Skin } from "../../types/skin";
+import { getTierColor } from "../../util/get-tier-color";
+import { useEffect, useState } from 'react';
 
 export default function StoreCard(skin: Skin) {
-  return (
-    <View style={styles.card}>
-      <View style={styles.imageWrapper}>
-        <Image 
-          source={{ uri: skin.picture }} 
-          style={styles.image} 
-          resizeMode="contain" 
-        />
-      </View>
+    const [tierColor, setTierColor] = useState<string | null>(null);
 
-      <View style={styles.infoContainer}>
-        <Text style={styles.skinName} numberOfLines={1}>
-          {skin.name}
-        </Text>
-        <Text style={styles.price}>{skin.price} VP</Text>
-      </View>
-    </View>
-  );
+    useEffect(() => {
+    let isMounted = true;
+
+    if (skin.tierUuid) {
+      getTierColor(skin.tierUuid).then((color) => {
+        if (isMounted) {
+          setTierColor(color);
+        }
+      });
+    }
+    return () => {
+      isMounted = false;
+    };
+  }, [skin.tierUuid]);
+
+    return (
+        <View style={[styles.card, tierColor ? { borderColor: tierColor } : null]}>
+        <View style={styles.imageWrapper}>
+            <Image 
+            source={{ uri: skin.picture }} 
+            style={styles.image} 
+            resizeMode="contain" 
+            />
+        </View>
+
+        <View style={styles.infoContainer}>
+            <Text style={styles.skinName} numberOfLines={1}>
+            {skin.name}
+            </Text>
+            <Text style={styles.price}>{skin.price} VP</Text>
+        </View>
+        </View>
+    );
 }
 
 const styles = StyleSheet.create({
