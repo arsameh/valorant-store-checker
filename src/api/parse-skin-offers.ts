@@ -1,6 +1,7 @@
+import { SkinOffer } from "../types/skin-offer";
 import { getVpUuid } from "./get-vp-uuid";
 
-export async function parseSkinOffers(skinOffers: unknown[]): Promise<{uuid: string, price: number}[]> {
+export async function parseSkinOffers(skinOffers: unknown[]): Promise<SkinOffer[]> {
     const skinOffersArray: {uuid: string, price: number}[] = [];
     const vpUuid = await getVpUuid();
 

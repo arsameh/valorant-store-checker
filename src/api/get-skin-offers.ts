@@ -12,8 +12,12 @@ export async function getStore(riotInfo: RiotInfo): Promise<Skin[]> {
             "Authorization": `Bearer ${riotInfo.authTokens.accessToken}`,
             "User-Agent": "",
         
-        }
+        },
+
+        body: JSON.stringify({}),
     });
+
     const data = await response.json();
+
     return data.SkinsPanelLayout.SingleItemStoreOffers;
 }
