@@ -1,8 +1,9 @@
 import { Skin } from "../types/skin";
 import { getSkinUuidFromLevel } from "../util/skin-level-mapper";
+import { SkinOffer } from '../types/skin-offer';
 import { getFinalPrice } from "../util/get-final-price";
 
-export async function getSkinInfo(skinOffer: {uuid: string, price: number}[]): Promise<Skin[]> {
+export async function getSkinInfo(skinOffer: SkinOffer[]): Promise<Skin[]> {
     const skinArray: Skin[] = [];
     for(const offer of skinOffer) {
         const skinUuid = await getSkinUuidFromLevel(offer.uuid);
