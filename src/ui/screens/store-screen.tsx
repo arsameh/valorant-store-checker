@@ -1,9 +1,14 @@
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Skin } from "../../types/skin";
-import { FlatList, View, StyleSheet } from "react-native";
+import { Text, FlatList, View, StyleSheet, TouchableOpacity } from "react-native";
 import StoreCard from "../components/store-card";
 
-export default function StoreScreen({ skins }: { skins: Skin[] }) {
+interface StoreScreenProps {
+  skins: Skin[];
+  onLogout: () => void;
+}
+
+export default function StoreScreen({ skins, onLogout }: StoreScreenProps) {
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.container}>
@@ -17,7 +22,11 @@ export default function StoreScreen({ skins }: { skins: Skin[] }) {
           />
         </View>
 
-        <View style={styles.navbar} />
+        <View style={styles.navbar}>
+          <TouchableOpacity style={styles.logoutButton} onPress={onLogout} activeOpacity={0.7}>
+            <Text style={styles.logoutText}>LOGOUT</Text>
+          </TouchableOpacity>
+        </View>
 
       </View>
     </SafeAreaView>
@@ -42,5 +51,17 @@ const styles = StyleSheet.create({
   },
   navbar: {
     height: '10%',
+  },
+  logoutButton: {
+    paddingVertical: 8,
+    paddingHorizontal: 20,
+    backgroundColor: '#2b3135',
+    borderRadius: 6,
+  },
+  logoutText: {
+    color: '#ff4655',
+    fontWeight: 'bold',
+    fontSize: 14,
+    letterSpacing: 1,
   },
 });
