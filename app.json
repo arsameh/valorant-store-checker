@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "valorant-store-checker",
-    "slug": "valorant-store-checker",
+    "name": "VALORANT Store Peeper",
+    "slug": "ramen",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -24,6 +24,12 @@
     },
     "plugins": [
       "@preeternal/react-native-cookie-manager"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "7f6fc905-e25e-4c63-8fa8-125697ef5827"
+      }
+    },
+    "owner": "arsamehs-team"
   }
 }
