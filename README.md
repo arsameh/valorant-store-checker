@@ -18,5 +18,4 @@ A lightweight app to check daily valorant store changes through your phone!
 
 ## OPTIONAL:
 - [ ] Polish UI (dark mode, error handling, pull-to-refresh)
-- [ ] Fetch & parse Accessories store JSON (Kingdom Credits, Gun Buddies, Cards, Sprays)
-- [ ] Build UI for Accessories store tab
+- [ ] Nightmarket support
