@@ -8,7 +8,7 @@ A lightweight app to check daily valorant store changes through your phone!
 - [x] Fetch & parse raw storefront JSON from Riot API
 - [x] Map skin UUIDs to `valorant-api.com` assets (names, HD images, VP prices)
 - [x] Build main UI: login, logout buttons, display skin info
-- [ ] Implement session ID cookie storage for background re-authentication
+- [x] Implement session ID cookie storage for background re-authentication -> WEBVIEW AUTOMATICALLY HANDLES SESSIONS IT SEEMS, CANCELLED FOR NOW
 
 ## ADVANCED FEATURES:
 - [ ] Build browse screen to add/remove items from wishlist
