@@ -15,6 +15,7 @@ A lightweight app to check daily valorant store changes through your phone!
 - [ ] Set up background process to check store daily at reset
 - [ ] Match daily store skins against user wishlist
 - [ ] Trigger notification when a wishlisted item hits the store
+- [ ] Account switching
 
 ## OPTIONAL:
 - [ ] Polish UI (dark mode, error handling, pull-to-refresh)
